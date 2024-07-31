@@ -1,0 +1,13 @@
+@mixin container-fluit() {
+    max-width: 100%;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin: 0 auto;
+}
+
+@mixin container() {
+    width: 940px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin: 0 auto;
+}

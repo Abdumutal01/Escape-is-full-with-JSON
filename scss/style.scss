@@ -1,0 +1,379 @@
+// for import */
+@import "star";
+@import "body";
+@import "container";
+
+/*'_'*/
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Oxygen:wght@300;400;700&display=swap');
+
+/*start code*/
+
+*::after,
+*::before,
+* {
+    @include star();
+}
+
+body {
+    @include body();
+}
+
+.container {
+    @include container();
+}
+
+$fontOxygen: "Oxygen",
+sans-serif;
+$white:#FFFFFF;
+$whiteB2: #FFFFFFB2;
+$btnColor:#DD783F;
+$textColor:#FFFFFFA1;
+$silver:#768088;
+$mainBgColor:#F7F7F7;
+$innerColor:#2E2E2E;
+$lineColor:#DEDEDE;
+$footerLinkColor:#FFFFFF99;
+$footerInnerColor:#EFEFEF;
+
+/*##### " " ######*/
+
+.header {
+    height: 85vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &__nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__logo {
+        font-weight: 400;
+        font-size: 26px;
+        line-height: 26px;
+        color: $white;
+    }
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+    &__link {
+        display: block;
+        padding: 10px 20px;
+        font-family: $fontOxygen;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 20px;
+        letter-spacing: .6px;
+        color: $white;
+        transition: all .4s ease;
+    }
+    &__link:hover {
+        color: $btnColor;
+        font-size: 15px;
+        border-bottom: 2px solid $btnColor;
+    }
+    &__title {
+        margin-top: 103px;
+        text-align: center;
+        font-weight: 400;
+        font-size: 50px;
+        line-height: 51px;
+        color: $white;
+    }
+    &__text {
+        margin-top: 20px;
+        text-align: center;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 22px;
+        color: $textColor;
+    }
+    &__btn {
+        display: block;
+        margin: 0 auto;
+        margin-top: 31px;
+        padding: 12px 31px;
+        background-color: $btnColor;
+        color: $white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all .4s ease-in-out;
+    }
+    &__btn:hover {
+        padding: 20px 30px;
+        // box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    }
+}
+
+.smallHeader {
+    padding: 24px 0px;
+    background-color: $white;
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+    }
+    &__link {
+        color: $silver;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        text-align: center;
+        padding-bottom: 5px;
+        transition: all .5s ease-in;
+    }
+    &__link:hover {
+        color: $innerColor;
+        font-size: 16px;
+        border-bottom: 1.5px solid $innerColor;
+    }
+}
+
+
+/* posts section start*/
+
+.posts {
+    &__title {
+        font-family: $fontOxygen;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 27px;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 60px;
+        color: $innerColor;
+        border-bottom: 1px solid $innerColor;
+        padding-bottom: 17px;
+        width: 188px;
+    }
+    &__general {
+        margin-top: 23px;
+        display: grid;
+        grid-template-columns: repeat(2, 460px);
+        grid-gap: 20px;
+    }
+    &__cart {
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 0 20px;
+        padding-top: 157px;
+        padding-bottom: 20px;
+    }
+    &__inner {
+        font-weight: 400;
+        font-size: 27px;
+        line-height: 30px;
+        color: $white;
+    }
+    &__text {
+        margin-top: 10px;
+        font-family: $fontOxygen;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 25px;
+        color: $whiteB2;
+    }
+    &__userList {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__userItem {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    &__userImg {
+        width: 40px;
+        border-radius: 50%;
+    }
+    &__userName,
+    &__day {
+        font-family: $fontOxygen;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 35px;
+        color: $whiteB2;
+    }
+}
+
+
+/* posts section end*/
+
+
+/* recent section end*/
+
+.recent {
+    $innerColor: #101315;
+    $textColor: #7A7A7A;
+    $userNameColor: #999999;
+    margin-top: 60px;
+    &__title {
+        margin-bottom: 20px;
+    }
+    &__general {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(3, 296px);
+        grid-gap: 24px;
+        grid-gap: 24px;
+    }
+    &__cart {
+        height: 291px;
+        margin-top: 30px;
+        transition: all .5s ease-out;
+    }
+    &__cart:hover {
+        transform: scale(1.1);
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    &__dataBox {
+        padding: 14px;
+        background-color: $white;
+    }
+    &__img {
+        width: 295.98px;
+        height: 150px;
+    }
+    &__inner {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 21px;
+        color: $innerColor;
+    }
+    &__text {
+        margin-top: 8px;
+        color: $textColor;
+        font-weight: 400;
+        font-family: $fontOxygen;
+        font-size: 13px;
+        height: 38px;
+    }
+    &__line {
+        margin-top: 33px;
+        margin-bottom: 10px;
+        color: $footerInnerColor;
+        height: 2px;
+        background-color: $footerInnerColor;
+        border: none;
+    }
+    &__userList {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__userItem {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    &__userImg {
+        width: 40px;
+        border-radius: 50%;
+    }
+    &__userName,
+    &__day {
+        font-family: $fontOxygen;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 35px;
+        color: $userNameColor;
+    }
+}
+
+
+/* recent section end*/
+
+.footer {
+    margin-top: 90px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 58vh;
+    &__title {
+        font-family: $fontOxygen;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 30px;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 60px;
+        color: $footerInnerColor;
+        border-bottom: 1.5px solid $footerInnerColor;
+        padding-bottom: 17px;
+        width: 188px;
+    }
+    &__form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    &__email,
+    &__btn {
+        padding: 18px 35px;
+        font-family: Roboto;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14.06px;
+        border: none;
+    }
+    &__email {
+        width: 375px;
+        outline: none;
+        color: #817F83;
+    }
+    &__btn {
+        cursor: pointer;
+        color: #F8F8F8;
+        background-color: #FFFFFF47;
+    }
+    &__box {
+        margin-top: 80px;
+        padding: 28px 0px;
+        background-color: #232F3899;
+    }
+    &__nav,
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+    &__nav {
+        justify-content: space-between;
+    }
+    &__logo {
+        font-size: 26px;
+        font-weight: 400;
+        line-height: 26px;
+        text-align: left;
+        color: $white;
+    }
+    &__list {
+        gap: 20px;
+    }
+    &__links {
+        width: 60px;
+        font-family: $fontOxygen;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 26px;
+        letter-spacing: 1px;
+        text-align: right;
+        text-transform: uppercase;
+        color: $footerLinkColor;
+        transition: all .4s ease-in;
+    }
+    &__links:hover {
+        color: $white;
+        font-size: 12.5px;
+        border-left: 1px solid $white;
+        border-right: 1px solid $white;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+}

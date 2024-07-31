@@ -1,0 +1,7 @@
+@mixin body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Lora", serif;
+    background-color: #F7F7F7;
+}

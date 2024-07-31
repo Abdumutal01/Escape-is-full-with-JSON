@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Title Olish</title>
+</head>
+
+<body>
+    <script>
+        // JSON ma'lumotlari
+        const jsonData = [{
+            "id": 1,
+            "title": "Escape.",
+            "list": ["home", "Categories", "About", "Contact"],
+            "background": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5wvsW8E562Ph_ozwoTs0jyzcdLiBgs7jbcQ&s"
+        }, {
+            "id": 2,
+            "title": "Let's do it together.",
+            "text": "We travel the world in search of stories. Come along for the ride."
+        }, {
+            "id": 3,
+            "headerList": ["Nature", "Photography", "Relaxation", "Vacation", "Travel", "Adventure"]
+        }, {
+            "id": 4,
+            "featuerd_title": "Featured Posts",
+            "featured_boxes": [{
+                "title": "The Road Ahead",
+                "desc": "The road ahead might be paved - it might not be.",
+                "background": "https://legacy.travelnoire.com/wp-content/uploads/2024/05/Beautiful-View-of-Moraine-Lake-and-mountains.jpg",
+                "user": {
+                    "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRksl5i-rzmrUCiovdle3PdJiGdGZH_ezQu4w&s",
+                    "name": "Mat Vogels",
+                    "date": "September 25, 2015"
+                }
+            }, {
+                "title": "From Top Down",
+                "desc": "Once a year, go someplace you’ve never been before.",
+                "background": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxUt5NNs1RI08Y-7JHARiWb61vtXuOsEO_9g&s",
+                "user": {
+                    "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNQEhvQVJg1bqGnnJpD_1zK1BG1LbBdopnMQ&s",
+                    "name": "William Wong",
+                    "date": "September 25, 2015"
+                }
+            }]
+        }, {
+            "id": 5,
+            "recent_title": "Most Recent",
+            "recent_boxes": [{
+                "img": "https://aniq.uz/photos/news/QHJEwXcZkr3bKZA.jpeg",
+                "title": "Still Standing Tall",
+                "desc": "Life begins at the end of your comfort zone.",
+                "user": {
+                    "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNQEhvQVJg1bqGnnJpD_1zK1BG1LbBdopnMQ&s",
+                    "name": "William Wong",
+                    "date": "9/25/2015"
+                }
+            }, {
+                "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVjARQ7gHaKtGxQ1g29amGlAtqs2znIIhJlA&s",
+                "title": "Sunny Side Up",
+                "desc": "No place is ever as bad as they tell you it’s going to be.",
+                "user": {
+                    "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNQEhvQVJg1bqGnnJpD_1zK1BG1LbBdopnMQ&s",
+                    "name": "Mat Vogels",
+                    "date": "9/25/2015"
+                }
+            }, {
+                "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWNRLK3nRegAfIKDMi1pFmD96xnuHbyY8VUA&s",
+                "title": "Water Falls",
+                "desc": "We travel not to escape life, but for life not to escape us.",
+                "user": {
+                    "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNQEhvQVJg1bqGnnJpD_1zK1BG1LbBdopnMQ&s",
+                    "name": "Mat Vogels",
+                    "date": "9/25/2015"
+                }
+            }, {
+                "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaxu4AwFMsZIwUZwPAVXqlhrbOlSaM8Hv1tg&s",
+                "title": "Through the Mist",
+                "desc": "Travel makes you see what a tiny place you occupy in the world.",
+                "user": {
+                    "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNQEhvQVJg1bqGnnJpD_1zK1BG1LbBdopnMQ&s",
+                    "name": "William Wong",
+                    "date": "9/25/2015"
+                }
+            }, {
+                "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6_-nnKV6TEPB2ngzqrblbB6GnYn4UMffa5A&s",
+                "title": "Awaken Early",
+                "desc": "Not all those who wander are lost.",
+                "user": {
+                    "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNQEhvQVJg1bqGnnJpD_1zK1BG1LbBdopnMQ&s",
+                    "name": "Mat Vogels",
+                    "date": "9/25/2015"
+                }
+            }, {
+                "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa32B51ED_lYqINUaeZFtFzW7x4Mq-CBHtJg&s",
+                "title": "Try it Always",
+                "desc": "The world is a book, and those who do not travel read only one page.",
+                "user": {
+                    "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNQEhvQVJg1bqGnnJpD_1zK1BG1LbBdopnMQ&s",
+                    "name": "Mat Vogels",
+                    "date": "9/25/2015"
+                }
+            }]
+        }, {
+            "id": 6,
+            "footer_title": "Stay in Touch",
+            "footer_background": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHKVOM3dzSxrz5FkUpHKJsw5VnDhIfto9rNg&s",
+            "footer_logo": "Escape.",
+            "footerList": ["Home", "Categories", "About", "Contact"]
+        }];
+
+        // JSON ichidagi title qiymatlarini chiqarish
+        jsonData.forEach(obj => {
+            if (obj.title) {
+                console.log("Title:", obj.title);
+            }
+
+            if (obj.featured_boxes) {
+                obj.featured_boxes.forEach(box => {
+                    if (box.title) {
+                        console.log("Featured Box Title:", box.title);
+                    }
+                });
+            }
+
+            if (obj.recent_boxes) {
+                obj.recent_boxes.forEach(box => {
+                    if (box.title) {
+                        console.log("Recent Box Title:", box.title);
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
